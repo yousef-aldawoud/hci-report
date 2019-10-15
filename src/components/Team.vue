@@ -4,7 +4,7 @@
       <v-row>
           <v-flex xs12 md4 v-for="member in team" :key="member.id">
               
-        <v-card min-width="500px" class="ma-2" >
+        <v-card min-width="300px" class="ma-2" >
             <v-card-title>{{member.name}}</v-card-title>
             <v-card-text class="text-left">
                 <strong>
