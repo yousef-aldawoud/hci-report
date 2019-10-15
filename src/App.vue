@@ -8,7 +8,8 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <v-btn text>Team members</v-btn>
+        <v-btn text @click="team = !team" v-if="!team">Team members</v-btn>
+        <v-btn text @click="team = !team" v-else>Report</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <v-navigation-drawer
@@ -17,7 +18,8 @@
           app
           v-model="drawer"
         >
-        <v-list>
+      
+        <v-list v-if="!team">
           <v-list-item
             v-for="item in items"
             :key="item.title"
@@ -29,28 +31,37 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-
+        <v-list v-else>
+          <v-list-item @click="team=!team">Report</v-list-item>
+        </v-list>
       </v-navigation-drawer>
 
     <v-content>
-      <HelloWorld/>
+      <HelloWorld>
+        <Report v-if="!team"/>
+        <Team v-else/>
+      </HelloWorld>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
-
+import Report from './components/Report.vue';
+import Team from './components/Team.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    HelloWorld,Report,Team
   },
   data: () => ({
+    team:false,
     drawer:true,
      items: [
-          { title: 'Home', link: 'title' },
-          { title: 'About', link: 'style' },
+          { title: 'Introduction', link: '#intro' },
+          { title: 'Material', link: '#material' },
+          { title: 'Methodology', link: '#methodology' },
+          { title: 'Software insruction', link: '#insruction' },
         ]
   }),
 };

@@ -4,16 +4,16 @@
       text-center
       wrap
     >
-      <Report/>
+    <slot></slot>
+      
     </v-layout>
   </v-container>
 </template>
 
 <script>
-import Report from './Report.vue';
 export default {
   components:{
-    Report
+    
   },
   data: () => ({
     ecosystem: [
