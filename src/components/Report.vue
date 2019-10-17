@@ -493,29 +493,62 @@ Schauss, A. .G. . (1985). The Physiological Effect of Color on the Suppression o
     As we progressed through the lectures we came across the process of designing and the importance of prototypes. We learned how prototypes serves a big role in making a device or a software easier to use for users.
   </p>
   <p>
-    I also learned what are the benefits of making the prototype on cardboard papers instead of using fancy software design tool. It is related to people not giving critique about designs that looks complete of finished.
+    When were introduced to the second assignment, We started to learn topics regarding experiments and UI quality over features.
   </p>
   <p>
-    Also I have learned how to observe people when they test tools or softwares to get data to improve the software usability and design.
+    In this assignment I was responsible for designing the experiment software and in managing the report layout on the web version.
   </p>
   <p>
-    In the 4th week we learned how human haptics and senses play a big role in using tools and performing tasks. I started understanding how human preserve things and why some tools appear to be unnatural to us while they can be more functional than those that do.
+    I learned how to test usability on a software and how to control the variables in the experiment
   </p>
-  <p>
-    Even though doing the first assignment took me a lot of time, I learned a lot by gathering information and writing a detailed report on simple human action that we do in our daily life without thinking about it.
-  </p>
+  <div>
+    Lots of what I learned in the first half of the semester helped when making the software
+    <br>
+I had to learn a bit of HTML, CSS and Javascript to make the software.
+<br>
+It was a simple software for booking rooms.
+<br>
+The software contained three different versions colored non-colored and randomly colored.
+
+  </div>
   <p>
     In the second half of the semester we started learning about topics related to our second assignment. One of the topics that picked my interest is conducting experiments. We learned how some experiments can result in insufficient data for a study and how we can avoid those types of experiments. Furthermore, we learned how to observe people when they are part of that experiment 
   </p>
+  <p>When the people started testing my software and speaking about it I started to understand what UI elements the software lacked and what can be improved</p>
   <p>
     I learned how experiments should have constants and variables. 
 We also learned how to collect data from people and how to write questionnaires.
 What types of questions that can be useful for one topic and useless for the other.
-</p>
+
+  </p>
 <p>
 After finishing the second assignment, I feel more confident in my skills as a web developer.
 Due to learning the key values of UX/UI and exploring topics such as how humans’ mind learns to use different tools.
 I believe that my skills as a designer and a UI developer has improved after I took this class
+  </p>
+  <v-divider></v-divider>
+  <br>
+  <br>
+  <h3>Ahmed Aldawoud</h3>
+  <p>
+    Web apps, and mobile apps have become a huge part of our daily lives. We almost don’t pass a day without being on at least one or probably more Web applications. 
+In the last few years, we changed the way we browse the internet in the sense of we started using phones more often than a laptop of a PC. This meant that UIs need to be flexible to satisfy a large range of screen sizes.  
+
+  </p>
+  <p>
+    As a web developer and a colorblind person, I always had a problem picking colors for my website. I did some research about this topic and most UX designers were suggesting to start with the brand colors. However, I have noticed that when it comes to button colors, there is a lot of theories to what you should use for what. This assignment gave me and my friends the opportunity to experiment with different button color sets. Although we did not have enough participants to have a meaningful significant difference, we learned how to conduct that experiment, and how to make sense of data using data analysis tools.
+  </p>
+  <p>
+    If we had the time to do things differently, we would have been better off having each participant try one color set only, and to as many participants as we can. Having many participants will make it better as the effect of participants having different levels of skills in doing tasks online ( which we can’t control).
+  </p>
+  <p>
+    My responsibilities for this assignment were to design the task sheet, find participants to conduct the experiment, analyse the data, be part of writing the report, and help design the experiment UI hosted on github. The most part I enjoyed was the data analyses because I got to try some of the statistical methods I learned in the past, and make conclusions based on numbers.
+  </p>
+  <p>
+    This research taught me about how details must be considered when designing an experiment and that some variables can’t be fully controlled but their effect can be minimised with having more samples and randomisation. It also made me understand the strength and importance of few statistical methods that I learned before.
+  </p>
+  <p>
+    In the end, although we failed to disprove the null hypothesis, we learned a lot about what could have been done better to improve our results. I learned more about the concept of experimenting than whether colors make a difference on buttons. Although I am still interested in knowing what would the results be if the experiment was done on a larger sample, I now at least know what the next step should be to redo such experiment and get better, more reliable results.
   </p>
 </div>
       </v-flex>
