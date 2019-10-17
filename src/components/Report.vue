@@ -284,7 +284,7 @@ so;
 <br>
 <br>
 <br>
-  <h2>ONE WAY ANOVA:</h2>
+  <h2>One way ANOVA:</h2>
   <div>
 
     Anova: Single Factor
