@@ -19,15 +19,32 @@
           v-model="drawer"
         >
       
-        <v-list v-if="!team">
+        <v-list v-if="!team"
+          class="hidden-sm-and-down"
+        >
           <v-list-item
             v-for="item in items"
             :key="item.title"
             link
             :href="item.link"
+            
           >
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title >{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <v-list v-if="!team">
+          <v-list-item
+            v-for="item in items"
+            :key="'s'+item.title"
+            link
+            @click="drawer = !drawer"
+            class="hidden-md-and-up"
+            :href="item.link"
+          >
+            <v-list-item-content>
+              <v-list-item-title >{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -62,6 +79,13 @@ export default {
           { title: 'Material', link: '#material' },
           { title: 'Methodology', link: '#methodology' },
           { title: 'Software insruction', link: '#insruction' },
+          { title: 'Discussion & Findings', link: '#discussion' },
+          { title: 'ONE WAY ANOVA', link: '#anova' },
+          { title: 'Analysis', link: '#analysis' },
+          { title: 'Further Research', link: '#further-research' },
+          { title: 'Usability Testing', link: '#usability-testing' },
+          { title: 'Usability Evaluation', link: '#usability-eval' },
+          { title: 'Individual Reflection', link: '#reflection' },
         ]
   }),
 };

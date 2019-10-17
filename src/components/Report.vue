@@ -47,7 +47,7 @@ It is a test of whether we actually have expectations when it comes to button co
         <h1>Material</h1>
         <p>
           <ul>
-            <li>Web page we designed on <a href="https://yousef-aldawoud.github.io/booking-demo/">github</a>.</li>
+            <li>Web page we designed on <a target="_blank" href="https://yousef-aldawoud.github.io/booking-demo/">github</a>.</li>
             <li>Task sheet made by us.</li>
             <li>Timer.</li>
           </ul>
@@ -147,20 +147,526 @@ Room: <strong>SJ45</strong>
       </div>
       <br>
       <v-divider></v-divider>
-      <div id="refs">
-        <h2>Refs</h2>
-        Schauss, A. .G. . (1985). The Physiological Effect of Color on the Suppression of Human Aggression: Research on Baker-Miller Pink. : Alexander G Schauss.
+      <br>
+      <v-divider></v-divider>
+      <div id="discussion">
+      <br>
+      <br>
+      <br>
+        <h1>Discussion & Findings</h1>
+        <div>
+          Within the 15 people that we have involved within the experiment and interview, 
+<br> Table 1: Participants on Coloured Booking (Time-spent)
+      <br>
+      <br>
+      <v-row>
+        <v-flex xs12 md6>
+          <h4>Colored</h4>
+          <TrendChart
+          class="table1"
+          :min='0'
+          :max='500'
+          :datasets="table1.dataset"
+          :grid="table1.grid"
+          :labels="table1.labels"
+          ></TrendChart>
+          <h5 class="text-center">Participants</h5>
+        </v-flex>
+      </v-row>
+      <br><br>
+      <v-row>
+        <v-flex xs12 md6>
+
+          <h4>Non-Colored</h4>
+          <TrendChart
+          class="table1"
+          :min='0'
+          :max='500'
+          :datasets="table2.dataset"
+          :grid="table1.grid"
+          :labels="table1.labels"
+          ></TrendChart>
+          <h5 class="text-center">Participants</h5>
+        </v-flex>
+      </v-row>
+      <br><br>
+      <v-row>
+        <v-flex xs12 md6>
+
+          <h4>Random-Colored</h4>
+          <TrendChart
+          class="table1"
+          :min='0'
+          :max='500'
+          :datasets="table3.dataset"
+          :grid="table1.grid"
+          :labels="table1.labels"
+          ></TrendChart>
+          <h5 class="text-center">Participants</h5>
+        </v-flex>
+      </v-row>
+      <br><br>
+      <v-row>
+        <v-flex xs12 md6>
+
+          <h4>Random-Colored</h4>
+          <div>
+            <v-chip color="red" small dark>colored</v-chip>
+            <v-chip color="orange" small dark>non-colored</v-chip>
+            <v-chip color="purple" small dark>random-colored</v-chip>
+          </div>
+          <TrendChart
+          class="table4"
+          :min='0'
+          :max='500'
+          :datasets="table4.dataset"
+          :grid="table1.grid"
+          :labels="table1.labels"
+          ></TrendChart>
+          <h5 class="text-center">Participants</h5>
+        </v-flex>
+      </v-row>
+        <br>
+        <br>
+        <br>
+        <br>
+        <v-row>
+<v-flex xs12 md6>
+
+        <apexchart  type="bar" :options="bar.options" :series="bar.series"></apexchart>
+</v-flex>
+        </v-row>
+        <br>
+        <br>
+        The data that we have collected within 3 graphs represents the time it takes for the 3 tasks to be finished, we have asked 15 participants that had access to our Booking App to perform the given task as mentioned before where they would have to finish 6 tasks using the booking app. There are 3 variations where the first one is using coloured buttons, second would be non-coloured buttons, and the third would be randomly coloured buttons. The 3 variations are given in random order for each participant to avoid the bias that we would receive needed for our statistical evidence. We initially assumed that coloured buttons affect users by giving them a faster reaction when buttons are more familiar due to the nature of colour, but with the results of our calculation, we have found that it is not entirely the case. Within the graph that we produced, we have noticed the following.
+
+The Coloured Results varies per participants, but we have calculated their results and received an average of 307.13 seconds or 5 minutes and 7 seconds.
+
+The Non-coloured results have seen an average of 317.47 seconds or 5 minutes and 17 seconds which is a mere 10 seconds more than the coloured results.
+
+The Random coloured results have an average of 285.6 seconds or 4 minutes and 47 seconds which is 32 seconds less than the Non-coloured results and 22 seconds less than the Coloured Result.
+
+If we were to make an initial assumption, all 3 average shows variation but with a larger population size, we might not see any distinct difference so this proves that the data we are trying to gather doesn’t vary from one another, and therefore it has no significance whether the colour or the presence of text affects whether the user would perform faster within a given task.
+<br/>
+<br/>
+<strong>NULL HYPOTHESIS, H0:</strong>
+the means of the time taken do not vary significantly between the different coloured tests.
+<br/>
+so;
+<br/>
+      <div style="font-size:20pt">
+      µ 1  = µ2  = µ3   = 0 
       </div>
+
+  </div>
+  <strong>ALTERNATIVE HYPOTHESIS</strong>, HA: the mean of the time taken does vary significantly between the different coloured tests.
+  <div style="font-size:20pt">
+    µ 1  ! = µ2  ! =  µ3   ! = 0  
+  </div>
+  <br/>
+  <br/>
+  <table style="width: 100%;">
+    <tr>
+      <th>#</th>
+      <th>Colored</th>
+      <th>NON-Colored</th>
+      <th>RANDOM</th>
+    </tr>
+    <tr v-for="n in table" :key="n.name">
+      <td>{{n.name}}</td>
+      <td>{{n.colored}}</td>
+      <td>{{n.noncolored}}</td>
+      <td>{{n.randcolor}}</td>
+    </tr>
+  </table>
+</div>
+<div id="anova">
+<br>
+<br>
+<br>
+  <h2>ONE WAY ANOVA:</h2>
+  <div>
+
+    Anova: Single Factor
+    <h4>Summary</h4>
+    <table>
+      <tr>
+        <th>Groups</th>
+        <th>Count</th>
+        <th>Sum</th>
+        <th>Average</th>
+        <th>Variance</th>
+      </tr>
+      <tr>
+        <td>Colored</td>
+        <td>15</td>
+        <td>4607</td>
+        <td>307.133333</td>
+        <td>5183.838095</td>
+        
+      </tr>
+      <tr>
+        <td>Non-Colored</td>
+        <td>15</td>
+        <td>4762</td>
+        <td>317.4666667</td>
+        <td>4767.409524</td>
+      </tr>
+      <tr>
+        <td>Rand-Colored</td>
+        <td>15</td>
+        <td>4284</td>
+        <td>285.6</td>
+        <td>3696.542857</td>
+      </tr>
+    </table>
+    <br>
+    <h4>ANOVA</h4>
+    <table>
+      <tr>
+        <th>Source of Variation</th>
+        <th>SS</th>
+        <th>df</th>
+        <th>MS</th>
+        <th>F</th>
+        <th>P-value</th>
+        <th>F crit</th>
+      </tr>
+      <tr>
+        <td>Between Groups</td>
+        <td>7929.73</td>
+        <td>2</td>
+        <td>3964.87</td>
+        <td>0.87</td>
+        <td><strong>0.43</strong></td>
+        <td>3.22</td>
+      </tr>
+      <tr>
+        <td>Within Groups</td>
+        <td>191069.07</td>
+        <td>42</td>
+        <td>4549.26</td>
+      </tr>
+      <tr>
+        <td>total</td>
+        <td>198998.80</td>
+        <td>44</td>
+      </tr>
+    </table>
+    <br>
+  If the P-value is insignificant (more than 0.05) it means the F stat is insignificant.
+  It means no significant variance between the color sets was found, which means that we can’t disprove the null hypothesis,
+
+  <strong>P-value = 0.43</strong> which is higher than 0.05,<strong>which means we failed to reject the null hypothesis.</strong>
+
+  </div>
+  
+</div>
+<br>
+<v-divider></v-divider>
+<div id="analysis">
+  <br><br>
+  <br>
+  <h2>Analysis</h2>
+  <div>
+    The principles required for a usability test is to show how the design works to meet the purpose when testing the phenomenon. According to our data research, our perception of colour and the ability to read a button function has little to no effect whether the user would be far more adept or responsive whether the buttons look enticing, or whether the colour is random at all.
+  </div>
+  <br>
+  <div>
+    Initially, we have a sample size of 15 participants, we would not be able to get our level of confidence to a very acceptable rate so we resort into getting the initial result that the difference in colours doesn't matter. This means that we cannot prove our initial findings from our research that humans are more susceptible to colours and in extension, buttons with familiar colours of red and green should instinctively give us the idea green means good (continue) and red means bad (error or delete).
+  </div>
+  <br>
+  <div>
+    Secondly, even though we attempted to reduce the potential bias by randomizing the test that each participant would receive, we cannot escape the bias of them doing the same task 3 times in a row, which means that their 2nd and 3rd attempt would be faster. This means that we cannot get the amount of skew that we are expecting as most participants would follow a trend of getting faster and better on their subsequent attempt given that they have already done the activity beforehand.
+  </div>
+  <br>
+  <div>
+    Through this usability test that we ran through our subjects, the phenomenon of colour familiarity applied to UI/UX design has failed to deliver a conclusive evidence that colour does affect the users performance, speed, and instinctive reaction to natural colours applied to buttons. If we cannot gather more participants, then we wouldn’t be able to prove the validity of our theory.
+  </div>
+
+</div>
+<br>
+<v-divider></v-divider>
+ <div id="further-research">
+   <br>
+   <br>
+   <br>
+   <h2>
+     Further Research
+   </h2>
+   We have looked further into how do we eliminate performance and familiarity biases by giving the participants a random set of tasks every time they would do either of the 3 Booking Tasks. We are thinking of increasing our sample size and participant count so that we could increase the confidence level of our statistical findings. If both of these parameters could be improved in the future, then we would be able to expect a more conclusive proof whether colour does affect our performance as our P-value would be able to reach below 0.05 or 5%, so that we would be able to claim that the statistical data we got is significant to disprove the null hypothesis.
+ </div>
+ <br>
+ <v-divider></v-divider>
+<div id="usability-testing">
+  <br>
+  <br>
+  <br>
+  <h2>
+    Usability Testing
+  </h2>
+  <div>
+    Usability testing is a way of letting users test a hardware, software, or a phenomenon in order to see how easy it is to use.  (Barnum, 2010)
+  </div>
+</div>
+<div id="usability-eval">
+  <br>
+  <br>
+  <br>
+  <h2>
+    Usability Evaluation
+  </h2>
+  <div>
+    <div>
+      The use of a usability evaluation is to test a service which introduces the users to the new design which guarantees that it is user-friendly and it is instinctual irregardless of the user. This is able to provide a positive user experience as this links the existing knowledge the users have into a service that they are about to use which guarantees that any possible issues can be evaluated before releasing the product.
+    </div>
+    <br>
+    <div>
+      Since we are testing a phenomenon and not the usability of the booking app, we are more inclined to find the group’s result to prove that the phenomenon does exist and is prevalent on a lot of application that is currently out in the market.
+    </div>
+
+  </div>
+</div>
+<br>
+<v-divider></v-divider>
+<div id="ref">
+  <br>
+  <br>
+  <br>
+  <h2>Reference</h2>
+  Barnum, C.M. (2010). Retrieved from 
+  <a
+  target="_blank" 
+  href="https://books.google.co.nz/books?hl=en&lr=&id=tzX3J81MAAMC&oi=fnd&pg=PP1&dq=Usability+Testing+Essentials:+Ready,+Set...Test!&ots=uV5-ozYqbo&sig=t_cBPPdfZ1ZNMiVT8zxA_u4Y_rI&redir_esc=y#v=onepage&q=Usability%20Testing%20Essentials%3A%20Ready%2C%20Set...Test!&f=false">
+  https://books.google.co.nz/books?hl=en&lr=&id=tzX3J81MAAMC&oi=fnd&pg=PP1&dq=Usability+Testing+Essentials:+Ready,+Set...Test!&ots=uV5-ozYqbo&sig=t_cBPPdfZ1ZNMiVT8zxA_u4Y_rI&redir_esc=y#v=onepage&q=Usability%20Testing%20Essentials%3A%20Ready%2C%20Set...Test!&f=false
+  </a>
+  <br>
+Schauss, A. .G. . (1985). The Physiological Effect of Color on the Suppression of Human Aggression: Research on Baker-Miller Pink. : Alexander G Schauss.
+
+
+</div>
+<br>
+<v-divider></v-divider>
+<div id="reflection">
+  <br>
+  <br>
+  <br>
+  <h2>Individual Reflection</h2>
+  <h3>
+    Jeson Dijamco
+  </h3>
+  <p>
+    Our lives have integrated with technology for a long time from our work to our home lives, it is intertwined with our daily lives as much as technology is made smart to catch up to our fast pace of life. Our interaction with computers is bound strong that it affects the motion of our society, business, lifestyle and future. As IT students, we are driven to push this status quo forward, and with AHCI I have learned that our biological constructs or our 5 main senses are connected like two hands locked as if in prayer. AHCI through BCIS allowed me to understand the major factors that let technology affect us and how can we utilize technology efficiently.
+  </p>
+  <p>
+    During this specific group assignment, I developed my ability to research information necessary to form an analysis report. With the help of this assignment, I have learned how to back my research with statistical evidence required in order to prove an aspect within the research that we are currently working on.
+  </p>
+  <p>
+    My main responsibility is to set the Discussion and Findings of this experiment and to show enough statistical evidence of the phenomenon that we are trying to prove. I have also performed gathering data by locating participants and timing their results in order to meet my quota. I am certain that I have successfully done my part even though the results that we received didn’t match my initial expectations of what the phenomenon would be.
+  </p>
+  <p>
+    After the finalization of the findings that we have laid out, I learned how to improve my methods of gathering data, and providing controlled tests as bias could affect the collected data that I would be using to prove a phenomenon. So as a future Software developer, I am on the mindset that I should be proactively thinking if I am collecting the right set of data and if the data that I am collecting is worthy of being tabulated.
+  </p>
+  <p>
+    Team wise, the main issues where there wasn’t any initial contact on the first few weeks of the assignment, so we were left to prove a theory on a short amount of time. During the first readings of the assignment, I got stuck on how do I relate usability testing on proving a phenomenon. Due to the strain that I have on time and schedule and other papers, I am afraid that I am not producing a good quality report that would have sufficient evidence, research, and analysis.
+  </p>
+  <v-divider></v-divider>
+  <br>
+  <br>
+  <h3>
+    Yousef Aldawoud
+  </h3>
+  <p>
+    When I finished this paper I had learned a lot about how humans interact with different devices and what design aspects should be looked after to ensure the usability of that device.
+  </p>
+  <p>
+    In the first lecture, we had examples of previous devices that had different shapes and forms and we were taught about the two important aspects when looking at the artefacts presented
+  </p>
+  <ul>
+    <li>Context of use </li>
+    <li>Culture </li>
+  </ul>
+  <p>
+    The fact that some devices are designed in a specific way due to culture preferences at a time is interesting and raises a lot of questions in mind.
+  </p>
+  <p>
+    As we progressed through the lectures we came across the process of designing and the importance of prototypes. We learned how prototypes serves a big role in making a device or a software easier to use for users.
+  </p>
+  <p>
+    I also learned what are the benefits of making the prototype on cardboard papers instead of using fancy software design tool. It is related to people not giving critique about designs that looks complete of finished.
+  </p>
+  <p>
+    Also I have learned how to observe people when they test tools or softwares to get data to improve the software usability and design.
+  </p>
+  <p>
+    In the 4th week we learned how human haptics and senses play a big role in using tools and performing tasks. I started understanding how human preserve things and why some tools appear to be unnatural to us while they can be more functional than those that do.
+  </p>
+  <p>
+    Even though doing the first assignment took me a lot of time, I learned a lot by gathering information and writing a detailed report on simple human action that we do in our daily life without thinking about it.
+  </p>
+  <p>
+    In the second half of the semester we started learning about topics related to our second assignment. One of the topics that picked my interest is conducting experiments. We learned how some experiments can result in insufficient data for a study and how we can avoid those types of experiments. Furthermore, we learned how to observe people when they are part of that experiment 
+  </p>
+  <p>
+    I learned how experiments should have constants and variables. 
+We also learned how to collect data from people and how to write questionnaires.
+What types of questions that can be useful for one topic and useless for the other.
+</p>
+<p>
+After finishing the second assignment, I feel more confident in my skills as a web developer.
+Due to learning the key values of UX/UI and exploring topics such as how humans’ mind learns to use different tools.
+I believe that my skills as a designer and a UI developer has improved after I took this class
+  </p>
+</div>
       </v-flex>
   </v-layout>
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      table1:{
+        dataset:[
+          {
+            data: [380, 290, 345, 205, 306, 280, 370, 290, 310, 470, 200, 206, 216, 380, 320],
+            smooth: false,
+            fill: true
+          }
+        ]
+        ,grid:{
+          verticalLines: true,
+          horizontalLines: true
+        }
+        ,labels:{
+          xLabels:[],
+          yLabels: 6
+        }
+      },
+      table2:{
+        dataset:[
 
+          {
+            data: [320, 260, 365, 225, 374, 380, 250, 350, 285, 370, 410, 210, 227, 410, 330],
+            smooth: false,
+            fill: true
+          }
+        ],
+      },
+      table3:{
+        dataset:[
+
+          {
+            data: [280, 204, 360, 280, 265, 335, 220, 325, 265, 305, 370, 180, 260, 380, 360],
+            smooth: false,
+            fill: true
+          }
+        ],
+      },
+      table4:{
+        dataset:[
+          {
+            data: [280, 204, 360, 280, 265, 335, 220, 325, 265, 305, 370, 180, 260, 380, 360],
+            smooth: false,
+            fill: false,
+            className: "curve1"
+
+          },
+          {
+            className: "curve2",
+            data: [320, 260, 365, 225, 374, 380, 250, 350, 285, 370, 410, 210, 227, 410, 330],
+            smooth: false,
+            fill: false
+          },
+          {
+            className: "curve3",
+            data: [380, 290, 345, 205, 306, 280, 370, 290, 310, 470, 200, 206, 216, 380, 320],
+            smooth: false,
+            fill: false
+          }
+        ]
+      },
+      bar:{
+        options:{
+          chart: {
+          id: 'vuechart-example'
+        },
+        xaxis: {
+          categories: ["Participants"]
+        },
+
+        },
+        series: [
+            {
+              name: 'non-colored',
+              data: [4800]
+            },
+              {
+                name: 'random colored',
+                data: [4200]
+              },
+          {
+            name: 'colored',
+            data: [4500]
+          },
+        ]
+      },table:[
+        {name:"Mean",colored:"307.133333",noncolored:'317.4666667',randcolor:"285.5"},
+        {name:"Standard Error",colored:"18.5900298",noncolored:'17.82771162',randcolor:"15.6982862"},
+        {name:"Median",colored:"310",noncolored:'341',randcolor:"282"},
+        {name:"Mode",colored:"N/A",noncolored:'364',randcolor:"N/A"},
+        {name:"Standard Deviation",colored:"71.9988757",noncolored:'69.0464302',randcolor:"60.7992011"},
+        {name:"Sample Variance",colored:"5183.8381",noncolored:'4767.409524',randcolor:"3696.54286"},
+        {name:"Kurtosis",colored:"-0.2280125",noncolored:'-1.557960357',randcolor:"-0.7341369"},
+        {name:"Skewness",colored:"0.2946202",noncolored:'-0.184069337',randcolor:"0.02084649"},
+        {name:"Range",colored:"255",noncolored:'193',randcolor:"209"},
+        {name:"Minimum",colored:"201",noncolored:'217',randcolor:"179"},
+        {name:"Maximum",colored:"456",noncolored:'410',randcolor:"388"},
+        {name:"Sum",colored:"4607",noncolored:'4762',randcolor:"4284"},
+        {name:"Count",colored:"15",noncolored:'15',randcolor:"15"},
+        {name:"Confidence Level(95.0%)",colored:"39.8716483",noncolored:'38.23663856',randcolor:"33.6694753"},
+      ]
+
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
+.table1{
+    .stroke{
+      stroke:blue;
+    }
+}
+.table4{
+  .curve1{
+    .stroke{
+      stroke: red;
+      stroke-width: 2px;
+    }
+  }
 
+  .curve2{
+    .stroke{
+      stroke-width: 2px;
+      stroke: purple;
+    }
+  }
+  .curve3{
+    .stroke{
+      stroke-width: 2px;
+      stroke: orange;
+    }
+  }
+}
+table {
+  border-collapse: collapse;
+  
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
 </style>
