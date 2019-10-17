@@ -80,11 +80,12 @@ export default {
           { title: 'Methodology', link: '#methodology' },
           { title: 'Software insruction', link: '#insruction' },
           { title: 'Discussion & Findings', link: '#discussion' },
-          { title: 'ONE WAY ANOVA', link: '#anova' },
+          { title: 'One way ANOVA', link: '#anova' },
           { title: 'Analysis', link: '#analysis' },
           { title: 'Further Research', link: '#further-research' },
           { title: 'Usability Testing', link: '#usability-testing' },
           { title: 'Usability Evaluation', link: '#usability-eval' },
+          { title: 'Conclusion', link: '#conclusion' },
           { title: 'Individual Reflection', link: '#reflection' },
         ]
   }),

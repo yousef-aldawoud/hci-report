@@ -429,6 +429,27 @@ so;
 </div>
 <br>
 <v-divider></v-divider>
+<div id="conclusion">
+  <br>
+  <br>
+  <br>
+  <h1>Conclusion</h1>
+  <p>
+    In conclusion, we failed to prove that there’s a significant variance between the means of the speeds for different color sets. This can be explained by the lack of enough participants. Although we succeeded in doing further research that could further prove the phenomenon as long as we keep our data collection bias-free and the task to be varied to reduce familiarity bias and to be able to reduce the variance in between the data sets.
+  </p>
+  <p>
+    Due to having a very limited number of participants, we decided to have each participant try the three color sets and switch the sequence of the three of them every time we conducted the experiment. This was to reduce the effect of order bias.
+However, we noticed that participants had the tendency to become faster at the second trial than the first, and faster at the third than the second. The difference was very significant that we had to make sure each 5 of the 15 participants start with a sequence of the same first color set, and even those had to be divided into 2 types where half of them have a different second color set than the other half.
+Although we tried all those complicated methods of controlled randomisation, data was still not enough and the order bias still had a slight effect. 
+  </p>
+  <p>
+    What could’ve solved this problem is having more participants where we can have each participant try one single color set so they won’t have the effect of getting used to the software. 
+  </p>
+  <p>
+    Another factor that may have contributed to this failure is that we tested button colors on a webpage with a white background. Having a different background color can affect the numbers. This is because background color can change how we see the colors of the buttons.
+  </p>
+</div>
+<v-divider></v-divider>
 <div id="ref">
   <br>
   <br>
@@ -440,6 +461,7 @@ so;
   href="https://books.google.co.nz/books?hl=en&lr=&id=tzX3J81MAAMC&oi=fnd&pg=PP1&dq=Usability+Testing+Essentials:+Ready,+Set...Test!&ots=uV5-ozYqbo&sig=t_cBPPdfZ1ZNMiVT8zxA_u4Y_rI&redir_esc=y#v=onepage&q=Usability%20Testing%20Essentials%3A%20Ready%2C%20Set...Test!&f=false">
   https://books.google.co.nz/books?hl=en&lr=&id=tzX3J81MAAMC&oi=fnd&pg=PP1&dq=Usability+Testing+Essentials:+Ready,+Set...Test!&ots=uV5-ozYqbo&sig=t_cBPPdfZ1ZNMiVT8zxA_u4Y_rI&redir_esc=y#v=onepage&q=Usability%20Testing%20Essentials%3A%20Ready%2C%20Set...Test!&f=false
   </a>
+  <br>
   <br>
 Schauss, A. .G. . (1985). The Physiological Effect of Color on the Suppression of Human Aggression: Research on Baker-Miller Pink. : Alexander G Schauss.
 
